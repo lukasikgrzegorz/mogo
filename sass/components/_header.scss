@@ -9,9 +9,48 @@
   padding: 30px 40px;
 }
 
-
 .header__container{
   flex-direction: row;
   justify-content: space-between;
+  max-width: 1200px;
+  display: flex;
+  margin: auto;
+}
+
+.header__menu{
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
+}
+
+.header__menu-button {
+  color: getColor("alt");
+  background-color: transparent;
+  border: none;
+  transition: color $main-transition;
+  cursor: pointer;
+  
+  &:hover {
+    color: getColor("accent-secondary");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header__menu-button {
+    display: none;
+  }
+}
+
+.header__icon-holder {
+  width: 35px;
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__icon {
+  width: 35px;
+  height: 35px;
+  fill: currentColor;
 }
