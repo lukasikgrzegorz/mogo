@@ -1,5 +1,13 @@
 @use './../utils' as *;
 
+.header{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: getColor("alt");
+  width: 100%;
+}
+
 .header__container{
   justify-content: space-between;
   align-items: center;

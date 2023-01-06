@@ -1,0 +1,62 @@
+@use './../utils' as *;
+
+.banner{
+  width: 100%;
+  height: 1000px;
+  width: auto;
+  background-image: linear-gradient(to bottom, getColor("banner-background-primary"), getColor("banner-background-secondary")),
+      url(../images/banner-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 235px 0px;
+  color: getColor("alt");
+}
+
+.banner__wrapper{
+  width: 100%;
+  display: flex;
+  flex-direction: column;  
+  justify-content: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.banner__decorative-title{
+  font-family: 'Kaushan Script', cursive;
+  text-transform: capitalize;
+  font-size: 72px;
+  text-align: center;
+}
+
+.banner__title {
+  font-size: 150px;
+  text-transform: uppercase;
+  letter-spacing: -5px;
+  line-height: .9em;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.banner__link{
+  text-align: center;
+}
+
+.banner__button{
+  padding: 12px 15px;
+  margin: auto;
+  cursor: pointer;
+  color: getColor("alt");
+  border: 3px solid getColor("alt");
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 125px;
+  transition: $main-transition;
+
+  &:hover,
+  &:focus{
+    background-color: getColor("alt");
+    color: getColor("accent-secondary");
+  }
+}

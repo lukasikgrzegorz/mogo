@@ -25,6 +25,11 @@ a {
   color: currentColor;
 }
 
+.section {
+  padding: 30px 40px;
+  margin: auto;
+}
+
 .container {
   max-width: 1200px;
   display: -webkit-box;
@@ -33,9 +38,12 @@ a {
   margin: auto;
 }
 
-.section {
-  padding: 30px 40px;
-  margin: auto;
+.header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  color: #ffffff;
+  width: 100%;
 }
 
 .header__container {
@@ -139,4 +147,70 @@ a {
   to {
     background-color: currentColor;
   }
+}
+.banner {
+  width: 100%;
+  height: 1000px;
+  width: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.8235294118)), to(rgba(252, 227, 138, 0.8235294118))), url(../images/banner-background.jpg);
+  background-image: linear-gradient(to bottom, rgba(243, 129, 129, 0.8235294118), rgba(252, 227, 138, 0.8235294118)), url(../images/banner-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 235px 0px;
+  color: #ffffff;
+}
+
+.banner__wrapper {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.banner__decorative-title {
+  font-family: "Kaushan Script", cursive;
+  text-transform: capitalize;
+  font-size: 72px;
+  text-align: center;
+}
+
+.banner__title {
+  font-size: 150px;
+  text-transform: uppercase;
+  letter-spacing: -5px;
+  line-height: 0.9em;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.banner__link {
+  text-align: center;
+}
+
+.banner__button {
+  padding: 12px 15px;
+  margin: auto;
+  cursor: pointer;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 125px;
+  -webkit-transition: 250ms linear;
+  transition: 250ms linear;
+}
+.banner__button:hover, .banner__button:focus {
+  background-color: #ffffff;
+  color: #fce38a;
 }/*# sourceMappingURL=main.css.map */
