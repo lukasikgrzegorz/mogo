@@ -3,15 +3,15 @@
 *{
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
+    margin: 0;              
 }
 
 body{
-    color: getColor("main-color");
-    background-color: getColor("background-main-color");
-    font-family: "Open Sans", "Raleway", sans-serif;
+    color: getColor("primary");
+    background-color: getColor("background-color");
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    font-style: normal;
+    font-weight: 400;
 }
 
 ul{
@@ -24,5 +24,17 @@ img{
 
 a{
     text-decoration: none;
+    color: currentColor;
+}
+
+.container {
+    max-width: 1200px;
+    display: flex;
+    margin: auto;
+}
+
+.section {
+    padding: $big-padding;
+    margin: auto;
 }
 

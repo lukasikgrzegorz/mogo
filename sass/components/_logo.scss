@@ -1,0 +1,12 @@
+@use './../utils' as *;
+
+.logo__link{
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing:-1px;
+
+  &:hover,
+  &:focus{
+    color: getColor("accent-secondary");
+  }
+}
