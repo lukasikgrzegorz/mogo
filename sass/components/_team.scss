@@ -44,7 +44,7 @@
   position: absolute;
   top: -10px;
   left: -10px;
-  background: linear-gradient(to bottom, getColor("banner-background-primary"), getColor("banner-background-secondary"));
+  background: linear-gradient(to bottom, getColor("transparent-accent-primary"), getColor("transparent-accent-secondary"));
   box-shadow: 10px 10px getColor("accent-alt-primary");
   opacity: 0;
   display: flex;
