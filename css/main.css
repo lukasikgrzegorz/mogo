@@ -357,15 +357,6 @@ a {
           justify-content: space-between;
 }
 
-.team__item {
-  position: relative;
-}
-.team__item:hover .team__social-holder {
-  opacity: 1;
-  -webkit-animation: social-animation 450ms;
-          animation: social-animation 450ms;
-}
-
 @-webkit-keyframes social-animation {
   from {
     opacity: 0;
@@ -383,6 +374,15 @@ a {
     opacity: 1;
   }
 }
+.team__wrapper {
+  position: relative;
+}
+.team__wrapper:hover .team__social-holder {
+  opacity: 1;
+  -webkit-animation: social-animation 450ms;
+          animation: social-animation 450ms;
+}
+
 .team__photo-holder {
   width: 380px;
   height: 470px;
