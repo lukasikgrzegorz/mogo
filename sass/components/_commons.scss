@@ -35,7 +35,43 @@ a{
 .container {
     max-width: 1200px;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: auto;
+}
+
+.title{
+    width: max-content;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 110px;
+
+    &__main{
+        font-size: 30px;
+        text-transform: uppercase;
+        margin-top: 20px;
+    }
+
+    &__decorative{
+        font-family: 'Kaushan Script', cursive;
+        font-size: 24px;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 0px;
+        left: calc(50% - 30px);
+        top: calc(100% + 40px);
+        content: '';
+        width: 60px;
+        height: 3px;
+        background-color: getColor("accent-primary");
+        animation: underline-color-change 250ms;
+    }
 }
 
 

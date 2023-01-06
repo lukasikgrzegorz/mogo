@@ -1,0 +1,50 @@
+@use './../utils' as *;
+
+.services__list{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 75px; 
+  row-gap: 100px;
+}
+
+.services__item{
+  display: flex;
+  gap: 25px;
+}
+
+.services__icon-holder{
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: getColor("accent-alt-primary");
+  cursor: pointer;
+  transition: color $main-transition;
+
+  &:hover,
+  &:focus{
+    color: getColor("accent-alt-secondary");
+  }
+}
+
+.services__icon{
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.services__text-holder{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.services__title{
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.services__text{
+  color: getColor("secondary");
+}

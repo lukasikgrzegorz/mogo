@@ -26,7 +26,7 @@ a {
 }
 
 .section {
-  padding: 30px 40px;
+  padding: 45px 30px;
   margin: auto;
 }
 
@@ -35,18 +35,71 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
 }
 
-.header {
+.title {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  margin-bottom: 110px;
+}
+.title__main {
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+.title__decorative {
+  font-family: "Kaushan Script", cursive;
+  font-size: 24px;
+}
+.title::after {
+  position: absolute;
+  bottom: 0px;
+  left: calc(50% - 30px);
+  top: calc(100% + 40px);
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  -webkit-animation: underline-color-change 250ms;
+          animation: underline-color-change 250ms;
+}
+
+.header__section {
   position: absolute;
   top: 0px;
   left: 0px;
   color: #ffffff;
   width: 100%;
+  padding: 30px 40px;
 }
 
 .header__container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -82,6 +135,7 @@ a {
 
 .menu__link {
   text-transform: uppercase;
+  font-weight: 500;
   -webkit-transition: color 250ms linear;
   transition: color 250ms linear;
 }
@@ -92,15 +146,36 @@ a {
 .menu__link:hover::after, .menu__link:focus::after {
   position: absolute;
   left: 0;
-  top: 26px;
+  top: 25px;
   content: "";
   width: 100%;
   height: 3px;
   background-color: currentColor;
-  -webkit-animation: underline-color-change 250ms;
-          animation: underline-color-change 250ms;
+  -webkit-animation: underline-animation 1s;
+          animation: underline-animation 1s;
 }
 
+@-webkit-keyframes underline-animation {
+  from {
+    background-color: transparent;
+    width: 0;
+  }
+  to {
+    background-color: currentColor;
+    width: 100%;
+  }
+}
+
+@keyframes underline-animation {
+  from {
+    background-color: transparent;
+    width: 0;
+  }
+  to {
+    background-color: currentColor;
+    width: 100%;
+  }
+}
 .menu__options {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -131,23 +206,6 @@ a {
   fill: currentColor;
 }
 
-@-webkit-keyframes underline-color-change {
-  from {
-    background-color: transparent;
-  }
-  to {
-    background-color: currentColor;
-  }
-}
-
-@keyframes underline-color-change {
-  from {
-    background-color: transparent;
-  }
-  to {
-    background-color: currentColor;
-  }
-}
 .banner {
   width: 100%;
   height: 1000px;
@@ -157,7 +215,7 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 235px 0px;
+  padding: 235px 40px;
   color: #ffffff;
 }
 
@@ -213,4 +271,67 @@ a {
 .banner__button:hover, .banner__button:focus {
   background-color: #ffffff;
   color: #fce38a;
+}
+
+.services__list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  -webkit-column-gap: 75px;
+     -moz-column-gap: 75px;
+          column-gap: 75px;
+  row-gap: 100px;
+}
+
+.services__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 25px;
+}
+
+.services__icon-holder {
+  width: 32px;
+  height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #95e1d3;
+  cursor: pointer;
+  -webkit-transition: color 250ms linear;
+  transition: color 250ms linear;
+}
+.services__icon-holder:hover, .services__icon-holder:focus {
+  color: #eaffd0;
+}
+
+.services__icon {
+  width: 32px;
+  height: 32px;
+  fill: currentColor;
+}
+
+.services__text-holder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.services__title {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.services__text {
+  color: #b6b6b6;
 }/*# sourceMappingURL=main.css.map */

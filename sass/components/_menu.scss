@@ -12,6 +12,7 @@
 
 .menu__link{
   text-transform: uppercase;
+  font-weight: 500;
   transition: color $main-transition;
  
   &:hover,
@@ -22,13 +23,25 @@
     &::after {
         position: absolute;
         left: 0;
-        top: 26px;
+        top: 25px;
         content: '';
         width: 100%;
         height: 3px;
         background-color: currentColor;
-        animation: underline-color-change 250ms;
+        animation: underline-animation 1s;
       }
+  }
+}
+
+@keyframes underline-animation {
+  from {
+    background-color: transparent;
+    width: 0;
+  }
+
+  to {
+    background-color: currentColor;
+    width: 100%;
   }
 }
 
@@ -57,14 +70,4 @@
   width: 20px;
   height: 20px;
   fill: currentColor;
-}
-
-
-@keyframes underline-color-change {
-  from{
-    background-color: transparent;
-  }
-  to{
-    background-color: currentColor;
-  }
 }

@@ -1,14 +1,17 @@
 @use './../utils' as *;
 
-.header{
+.header__section{
   position: absolute;
   top: 0px;
   left: 0px;
   color: getColor("alt");
   width: 100%;
+  padding: 30px 40px;
 }
 
+
 .header__container{
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
