@@ -69,13 +69,23 @@ a {
   margin-bottom: 110px;
 }
 .title__main {
-  font-size: 30px;
+  font-size: 20px;
   text-transform: uppercase;
   margin-top: 20px;
 }
+@media screen and (min-width: 768px) {
+  .title__main {
+    font-size: 30px;
+  }
+}
 .title__decorative {
   font-family: "Kaushan Script", cursive;
-  font-size: 24px;
+  font-size: 18px;
+}
+@media screen and (min-width: 768px) {
+  .title__decorative {
+    font-size: 24px;
+  }
 }
 .title::after {
   position: absolute;
@@ -124,12 +134,38 @@ a {
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 50px;
+  display: none;
 }
 
+@media screen and (min-width: 768px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-column-gap: 40px;
+       -moz-column-gap: 40px;
+            column-gap: 40px;
+    row-gap: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .menu {
+    -webkit-column-gap: 50px;
+       -moz-column-gap: 50px;
+            column-gap: 50px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,17 +248,26 @@ a {
 
 .banner {
   width: 100%;
-  height: 1000px;
   width: auto;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.8235294118)), to(rgba(252, 227, 138, 0.8235294118))), url(../images/banner-background.jpg);
   background-image: linear-gradient(to bottom, rgba(243, 129, 129, 0.8235294118), rgba(252, 227, 138, 0.8235294118)), url(../images/banner-background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 235px 40px;
+  padding: 160px 10px 120px;
   color: #ffffff;
 }
 
+@media screen and (min-width: 768px) {
+  .banner {
+    padding: 160px 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .banner {
+    padding: 235px 40px;
+  }
+}
 .banner__wrapper {
   width: 100%;
   display: -webkit-box;
@@ -235,19 +280,45 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 800px;
+  max-width: 280px;
+  width: auto;
   margin: auto;
 }
 
+@media screen and (min-width: 480px) {
+  .banner__wrapper {
+    max-width: 400px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner__wrapper {
+    max-width: 600px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .banner__wrapper {
+    max-width: 800px;
+  }
+}
 .banner__decorative-title {
   font-family: "Kaushan Script", cursive;
   text-transform: capitalize;
-  font-size: 72px;
+  font-size: 36px;
   text-align: center;
 }
 
+@media screen and (min-width: 768px) {
+  .banner__decorative-title {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .banner__decorative-title {
+    font-size: 72px;
+  }
+}
 .banner__title {
-  font-size: 150px;
+  font-size: 54px;
   text-transform: uppercase;
   letter-spacing: -5px;
   line-height: 0.9em;
@@ -255,8 +326,24 @@ a {
   margin-top: 40px;
 }
 
+@media screen and (min-width: 480px) {
+  .banner__title {
+    font-size: 72px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner__title {
+    font-size: 96px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .banner__title {
+    font-size: 150px;
+  }
+}
 .banner__link {
   text-align: center;
+  margin-top: 125px;
 }
 
 .banner__button {
@@ -268,7 +355,6 @@ a {
   background-color: transparent;
   text-transform: uppercase;
   font-weight: 700;
-  margin-top: 125px;
   -webkit-transition: 250ms linear;
   transition: 250ms linear;
 }
@@ -279,13 +365,29 @@ a {
 
 .services__list {
   display: grid;
-  grid-template-columns: auto auto auto;
-  -webkit-column-gap: 75px;
-     -moz-column-gap: 75px;
-          column-gap: 75px;
-  row-gap: 100px;
+  margin: auto;
+  grid-template-columns: auto;
+  row-gap: 30px;
 }
 
+@media screen and (min-width: 768px) {
+  .services__list {
+    grid-template-columns: auto auto;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    row-gap: 50px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .services__list {
+    grid-template-columns: auto auto auto;
+    -webkit-column-gap: 75px;
+       -moz-column-gap: 75px;
+            column-gap: 75px;
+    row-gap: 100px;
+  }
+}
 .services__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -352,9 +454,30 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
+@media screen and (min-width: 768px) {
+  .team__list {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 @-webkit-keyframes social-animation {
   from {
     opacity: 0;
@@ -363,7 +486,6 @@ a {
     opacity: 1;
   }
 }
-
 @keyframes social-animation {
   from {
     opacity: 0;
@@ -384,9 +506,20 @@ a {
 
 .team__photo-holder {
   width: 100%;
-  height: 470px;
+  height: 300px;
+  margin: auto;
 }
 
+@media screen and (min-width: 768px) {
+  .team__photo-holder {
+    height: 360px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .team__photo-holder {
+    height: 470px;
+  }
+}
 .team__photo {
   width: 100%;
   height: 100%;
@@ -441,8 +574,8 @@ a {
 }
 
 .socials__button {
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -463,6 +596,12 @@ a {
   background-color: #f38181;
 }
 
+@media screen and (min-width: 1280px) {
+  .socials__button {
+    width: 55px;
+    height: 55px;
+  }
+}
 .socials__icon {
   width: 30px;
   height: 30px;
@@ -480,18 +619,27 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  row-gap: 15px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer__container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .footer__text {
   font-weight: 600;
 }
@@ -509,10 +657,23 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  row-gap: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
+@media screen and (min-width: 480px) {
+  .footer__form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 .footer__input {
-  width: 280px;
+  width: 200px;
   padding: 12px;
   border: 1px solid rgba(182, 182, 182, 0.4078431373);
   outline: none;
@@ -538,8 +699,15 @@ a {
   color: rgba(182, 182, 182, 0.4078431373);
 }
 
+@media screen and (min-width: 768px) {
+  .footer__input {
+    width: 280px;
+  }
+}
 .footer__button {
-  padding: 15px 35px;
+  padding: 15px 15px;
+  max-width: 120px;
+  margin: auto;
   border: none;
   color: #ffffff;
   text-transform: uppercase;
@@ -550,4 +718,11 @@ a {
 }
 .footer__button:hover, .footer__button:focus {
   background-color: #eaffd0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__button {
+    padding: 15px 35px;
+    max-width: none;
+  }
 }/*# sourceMappingURL=main.css.map */

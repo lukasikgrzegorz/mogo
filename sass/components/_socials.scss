@@ -11,8 +11,8 @@
 
 
 .socials__button{
-  width: 55px;
-  height: 55px;
+  width: 45px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +25,13 @@
   &:focus{
     color: getColor("alt");
     background-color: getColor("accent-primary");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .socials__button {
+    width: 55px;
+    height: 55px;
   }
 }
 

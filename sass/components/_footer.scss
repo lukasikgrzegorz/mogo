@@ -9,9 +9,16 @@
   width: 100%;
   border-top: 1px solid getColor("transparent-primary");
   display: flex;
-  flex-direction: row;
+  flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
+  row-gap: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__container {
+    flex-direction: row;
+  }
 }
 
 .footer__text{
@@ -29,10 +36,19 @@
 
 .footer__form{
   display: flex;
+  row-gap: 10px;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 480px) {
+  .footer__form {
+    flex-direction: row;
+   
+  }
 }
 
 .footer__input{
-  width: 280px;
+  width: 200px;
   padding: 12px;
   border: 1px solid getColor("transparent-primary");
   outline: none;
@@ -43,8 +59,16 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .footer__input {
+    width: 280px;
+  }
+}
+
 .footer__button{
-  padding: 15px 35px;
+  padding: 15px 15px;
+  max-width: 120px;
+  margin: auto;
   border: none;
   color: getColor("alt");
   text-transform: uppercase;
@@ -55,6 +79,13 @@
   &:hover,
   &:focus{
     background-color: getColor("accent-alt-secondary");  
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer__button{
+    padding: 15px 35px;
+    max-width: none;
   }
 }
 
