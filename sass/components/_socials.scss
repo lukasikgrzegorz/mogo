@@ -1,0 +1,35 @@
+@use './../utils' as *;
+
+.socials{
+  margin:auto;
+  display: flex;
+}
+
+.socials__item:not(:last-child) {
+  border-right: 1px solid getColor("accent-primary");
+}
+
+
+.socials__button{
+  width: 55px;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: getColor("accent-primary");
+  background-color: getColor("accent-secondary");
+  border: none;
+  transition: color $main-transition,
+              background-color $main-transition;
+  &:hover,
+  &:focus{
+    color: getColor("alt");
+    background-color: getColor("accent-primary");
+  }
+}
+
+.socials__icon{
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
+}

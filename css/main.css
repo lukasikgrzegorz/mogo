@@ -338,4 +338,121 @@ a {
 
 .services__text {
   color: #b6b6b6;
+}
+
+.team__text {
+  color: #b6b6b6;
+  max-width: 950px;
+  margin: auto;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.team__item {
+  position: relative;
+}
+.team__item:hover .team__social-holder {
+  opacity: 1;
+  -webkit-animation: social-animation 450ms;
+          animation: social-animation 450ms;
+}
+
+@-webkit-keyframes social-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes social-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.team__photo-holder {
+  width: 380px;
+  height: 470px;
+}
+
+.team__photo {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.team__social-holder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(243, 129, 129, 0.8235294118)), to(rgba(252, 227, 138, 0.8235294118)));
+  background: linear-gradient(to bottom, rgba(243, 129, 129, 0.8235294118), rgba(252, 227, 138, 0.8235294118));
+  -webkit-box-shadow: 10px 10px #95e1d3;
+          box-shadow: 10px 10px #95e1d3;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.socials {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.socials__item:not(:last-child) {
+  border-right: 1px solid #f38181;
+}
+
+.socials__button {
+  width: 55px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #f38181;
+  background-color: #fce38a;
+  border: none;
+  -webkit-transition: color 250ms linear, background-color 250ms linear;
+  transition: color 250ms linear, background-color 250ms linear;
+}
+.socials__button:hover, .socials__button:focus {
+  color: #ffffff;
+  background-color: #f38181;
+}
+
+.socials__icon {
+  width: 30px;
+  height: 30px;
+  fill: currentColor;
 }/*# sourceMappingURL=main.css.map */

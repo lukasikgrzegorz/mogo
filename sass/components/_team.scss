@@ -1,0 +1,53 @@
+@use './../utils' as *;
+
+.team__text{
+  color: getColor("secondary");
+  max-width: 950px;
+  margin: auto;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.team__list{
+  display: flex;
+  justify-content: space-between;
+}
+
+.team__item{
+  position: relative;
+
+  &:hover .team__social-holder{
+    opacity: 1;
+    animation: social-animation 450ms ;
+  }
+}
+
+@keyframes social-animation {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+.team__photo-holder{
+  width: 380px;
+  height: 470px;
+}
+
+.team__photo{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team__social-holder{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: linear-gradient(to bottom, getColor("banner-background-primary"), getColor("banner-background-secondary"));
+  box-shadow: 10px 10px getColor("accent-alt-primary");
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
