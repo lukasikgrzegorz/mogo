@@ -1,4 +1,4 @@
-#  Mogo
+#  MoGo
 
 Responsive website created on the basis of a PSD mock-up.
 
