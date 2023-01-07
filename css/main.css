@@ -396,7 +396,11 @@ a {
 }
 .banner__link {
   text-align: center;
+  margin: auto;
   margin-top: 125px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .banner__button {

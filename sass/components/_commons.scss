@@ -1,6 +1,6 @@
 @use './../utils' as *;
 
-html {
+html{
     scroll-behavior: smooth;
 }
 
@@ -31,12 +31,12 @@ a{
     color: currentColor;
 }
 
-.section {
+.section{
     padding: $main-padding;
     margin: auto;
 }
 
-.container {
+.container{
     max-width: 1200px;
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@ a{
         margin-top: 20px;
     }
     
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px){
         &__main{
             font-size: 30px;
         }
@@ -71,13 +71,13 @@ a{
         font-size: 18px;
     }
 
-    @media screen and (min-width: 768px) {
-        &__decorative {
+    @media screen and (min-width: 768px){
+        &__decorative{
             font-size: 24px;
         }
     }
 
-    &::after {
+    &::after{
         position: absolute;
         bottom: 0px;
         left: calc(50% - 30px);

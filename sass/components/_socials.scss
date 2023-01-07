@@ -5,7 +5,7 @@
   display: flex;
 }
 
-.socials__item:not(:last-child) {
+.socials__item:not(:last-child){
   border-right: 1px solid getColor("accent-primary");
 }
 
@@ -28,8 +28,8 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .socials__button {
+@media screen and (min-width: 1280px){
+  .socials__button{
     width: 55px;
     height: 55px;
   }

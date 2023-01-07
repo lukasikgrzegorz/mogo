@@ -4,8 +4,8 @@
   display: none;
 }
 
-@media screen and (min-width: 768px) {
-  .menu {
+@media screen and (min-width: 768px){
+  .menu{
     display: flex;
     column-gap: 40px;
     row-gap: 30px;
@@ -14,8 +14,8 @@
   }
 }
 
-@media screen and (min-width: 1280px) {
-  .menu {
+@media screen and (min-width: 1280px){
+  .menu{
     column-gap: 50px;
     flex-direction: row;
   }
@@ -36,7 +36,7 @@
     color: getColor("accent-secondary");
     position: relative;
 
-    &::after {
+    &::after{
         position: absolute;
         left: 0;
         top: 25px;
@@ -49,13 +49,13 @@
   }
 }
 
-@keyframes underline-animation {
-  from {
+@keyframes underline-animation{
+  from{
     background-color: transparent;
     width: 0;
   }
 
-  to {
+  to{
     background-color: currentColor;
     width: 100%;
   }
@@ -66,11 +66,11 @@
   gap: 40px;
 }
 
-.menu__option-link {
+.menu__option-link{
   transition: color $main-transition;
 
   &:hover,
-  &:focus {
+  &:focus{
     color: getColor("accent-secondary");
     position: relative;
   }

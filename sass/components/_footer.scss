@@ -15,8 +15,8 @@
   row-gap: 15px;
 }
 
-@media screen and (min-width: 768px) {
-  .footer__container {
+@media screen and (min-width: 768px){
+  .footer__container{
     flex-direction: row;
   }
 }
@@ -40,8 +40,8 @@
   flex-direction: column;
 }
 
-@media screen and (min-width: 480px) {
-  .footer__form {
+@media screen and (min-width: 480px){
+  .footer__form{
     flex-direction: row;
    
   }
@@ -59,8 +59,8 @@
   }
 }
 
-@media screen and (min-width: 768px) {
-  .footer__input {
+@media screen and (min-width: 768px){
+  .footer__input{
     width: 280px;
   }
 }
@@ -82,7 +82,7 @@
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px){
   .footer__button{
     padding: 15px 35px;
     max-width: none;
