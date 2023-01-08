@@ -373,15 +373,16 @@ a {
 .banner__title {
   font-size: 54px;
   text-transform: uppercase;
-  letter-spacing: -5px;
   line-height: 0.9em;
   text-align: center;
   margin-top: 40px;
+  letter-spacing: -3px;
 }
 
 @media screen and (min-width: 480px) {
   .banner__title {
     font-size: 72px;
+    letter-spacing: -4px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -392,6 +393,7 @@ a {
 @media screen and (min-width: 1280px) {
   .banner__title {
     font-size: 150px;
+    letter-spacing: -5px;
   }
 }
 .banner__link {
